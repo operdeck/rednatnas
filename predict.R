@@ -117,10 +117,10 @@ crossValidation <- trainControl(
   classProbs = TRUE,
   verbose=T)
 
-xgbGrid <- expand.grid(nrounds = seq(10,700,by=50),#seq(500,1000,by=200),
-                       eta = c(0.01, 0.02, 0.05), # 0.01
-                       max_depth = seq(4,6),
-                       gamma = 2, #c(2, 3, 4, 5), 
+xgbGrid <- expand.grid(nrounds = seq(10,1000,by=50),#seq(500,1000,by=200),
+                       eta = c(0.01, 0.02), # 0.01
+                       max_depth = seq(4,7),
+                       gamma = c(0,1,2), #c(2, 3, 4, 5), 
                        colsample_bytree = 0.85, 
                        min_child_weight = 5) 
 
